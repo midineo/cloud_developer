@@ -1,0 +1,15 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: .
+    image: midineo/reverseproxy 
+  backend_user:
+    build:
+      context: ../../udacity-c3-restapi-user
+    image: midineo/udacity-restapi-user
+  backend_feed:
+    build:
+      context: ../../udacity-c3-restapi-feed  
+    image: midineo/udacity-restapi-feed
+  
